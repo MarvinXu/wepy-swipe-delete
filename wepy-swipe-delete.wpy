@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   padding: 0 10px;
-  margin-top: 10rpx;
+  // margin-top: 10rpx;
   .swipe-actions{
     display: flex;
     flex-direction: row;
@@ -32,7 +32,7 @@
     left: 0;
     z-index: 5;
     padding:0 18rpx;
-    border-top: 1px solid #e5e5e5;
+    // border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     background-color: white;
     .swipe-title {
@@ -78,7 +78,7 @@
     props = {
       swipeData: {
         type: Object,
-        default: []
+        default: {}
       }
     }
 
@@ -88,7 +88,9 @@
     }
 
     onLoad () {
-      this.swipeData.style = 0
+      if (this.swipeData) {
+        this.swipeData.style = 0
+      }
     }
 
     methods = {
